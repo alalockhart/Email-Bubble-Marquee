@@ -1,0 +1,337 @@
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=SUSE:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+<style>
+/* --- MARQUEE WRAPPER --- */
+.marquee-wrapper {
+width: 100%;
+overflow: hidden;
+position: relative;
+padding: 20px 0;
+}
+
+.marquee-wrapper:hover .marquee-track {
+animation-play-state: paused;
+}
+
+/* --- EMAIL BUBBLE --- */
+.email-card {
+min-width: 320px;
+max-width: 360px;
+background: #fff;
+border-radius: 14px;
+padding: 20px;
+box-shadow: 0 6px 6px rgba(0,0,0,0.1);
+border: 1px solid #e5e5e5;
+display: flex;
+flex-direction: column;
+}
+
+/* Subject */
+.email-subject {
+font-family: "SUSE", sans-serif;
+line-height: 1.1;
+font-weight: 600;
+font-size: 1.8rem;
+margin-bottom: 10px;
+color: #222;
+}
+
+/* Body */
+.email-body {
+font-family: "SUSE", sans-serif;
+font-size: 1rem;
+line-height: 1.3;
+font-weight: 550;
+color: #444;
+margin-bottom: 0px;
+}
+
+/* Sender */
+.email-top {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+margin-bottom: 10px;
+}
+
+/* Sender block (top-left) */
+.email-header {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+line-height: 1.2;
+}
+
+.email-from-name {
+font-family: "SUSE", sans-serif;
+font-size: 0.95rem;
+font-weight: 600;
+color: #222;
+}
+
+.email-to {
+font-family: "SUSE", sans-serif;
+font-size: 0.85rem;
+color: #777;
+}
+
+/* Icons (top-right) */
+.email-icons {
+display: flex;
+gap: 10px;
+opacity: 0.6;
+}
+
+.email-icons .icon {
+font-size: 1rem;
+cursor: pointer;
+transition: opacity 0.2s ease;
+}
+
+.email-icons .icon:hover {
+opacity: 1;
+}
+
+.marquee-track {
+display: flex;
+width: max-content;
+animation: scroll 30s linear infinite;
+gap: 24px; /* <-- THIS removes the weird spacing */
+}
+
+.track-inner {
+display: flex;
+gap: 24px;
+}
+
+/* --- SCROLL ANIMATION --- */
+@keyframes scroll {
+0% { transform: translateX(0); }
+100% { transform: translateX(-100%); }
+}
+
+/* Duplicate track for seamless loop */
+.marquee-track > * {
+flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+.marquee-track {
+animation-duration: 25s;
+}
+}
+
+@media (max-width: 400px) {
+.marquee-track {
+animation-duration: 20s;
+}
+}
+
+</style>
+
+<div class="marquee-wrapper">
+<div class="marquee-track">
+
+<!-- TRACK INNER #1 -->
+<div class="track-inner">
+
+<!-- CARD 1 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Alex Robert</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: This really worked!</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Sally Jones</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: OMG I need this!</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Lana Lang</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: Wow, I love this...</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Victor Krum</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: You are good! LOL.</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 5 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Robin Red</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: I love it :)</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+</div><!-- end track-inner #1 -->
+
+<!-- TRACK INNER #2 (IDENTICAL COPY) -->
+<div class="track-inner">
+
+<!-- CARD 1 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Alex Robert</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: This really worked!</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 2 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Sally Jones</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: OMG I need this!</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 3 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Lana Lang</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: Wow, I love this...</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 4 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Victor Krum</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: You are good! LOL.</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+<!-- CARD 5 -->
+<div class="email-card">
+<div class="email-top">
+<div class="email-header">
+<div class="email-from-name">Robin Red</div>
+<div class="email-to">to me 🞃</div>
+</div>
+<div class="email-icons">
+<span class="icon">★</span>
+<span class="icon">↩</span>
+<span class="icon">⋮</span>
+</div>
+</div>
+<div class="email-subject">Subject: I love it :)</div>
+<div class="email-body">
+This is an amazing service and it has saved me and my small business so much time. I plan to use it for a long time to come.
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
